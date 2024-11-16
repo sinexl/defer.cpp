@@ -4,7 +4,7 @@ Provides `defer` functionality to C++ like in other languages
 
 # Usage 
 
-``` c
+``` c++
 #include "defer.hpp"
 #include <iostream>
 
@@ -30,4 +30,3 @@ int main(void)
     return 0; 
 }
 ```
-
