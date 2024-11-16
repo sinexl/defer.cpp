@@ -2,7 +2,6 @@
 #define _DEFER_H_
 
 #include <functional>
-#include <iostream>
 
 namespace defer {
 class Defer {
