@@ -7,16 +7,18 @@ namespace defer {
 class Defer {
 private:
     std::function<void(void)> on_exit;
+private:
+    Defer(const Defer&);
+    Defer(Defer&&);
+    Defer& operator=(const Defer&);
+    Defer& operator=(Defer&&);
 
 public:
     Defer(std::function<void(void)> code)
         : on_exit(code)
     {
     }
-    ~Defer()
-    {
-        on_exit();
-    }
+    ~Defer() { on_exit(); }
 };
 
 } // namespace defer
